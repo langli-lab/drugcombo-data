@@ -58,6 +58,58 @@ Publications from PubMed search.
 | ES         | `Escalation - starting from a lower dose and increase the dose`<br>`De-escalation - starting from a higher dose and reduce the dose` |
 | DesignType | Statistical design method                                                                                                            |
 | schema     | How to reach the maximum dose                                                                                                        |
+### dlt_definition.csv
+
+| Column        | Description                                                                                                                 |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| PMID          | PubMed unique identifier. **Files can be linked by PMID**                                                                   |
+| NCTID         | Registration ID, typically is a NCT ID (clinicaltrials.gov)                                                                 |
+| CombnID       | A random number to differentiate multiple drug combinations or drug dosing in one trial                                     |
+| DLT_Name      | A dose-limiting toxicity term or expression                                                                                 |
+| Grade         | The severity of the DLT                                                                                                     |
+| Duration      | When do adverse drug events (ADE) occur, and how long do they last? These can be defined as dose-limiting toxicities (DLT). |
+| DLT_Exculsion | If this DLT_Name should be excluded from DLT                                                                                |
+| comments      | Addtional info by the data curators                                                                                         |
+### dose_level.csv
+
+| PMID       | PubMed unique identifier. **Files can be linked by PMID**                               |
+| ---------- | --------------------------------------------------------------------------------------- |
+| NCTID      | Registration ID, typically is a NCT ID (clinicaltrials.gov)                             |
+| CombnID    | A random number to differentiate multiple drug combinations or drug dosing in one trial |
+| Drug_Name  | Drug name (e.g., brand name, generic name, or internal name)                            |
+| Dose_Level | An identifier to differentiate distinct doses in one trial.                             |
+| Dose_Vaule | The number of dose                                                                      |
+| Dose_Unit  | Dose unit                                                                               |
+| Frequency  | How many times is the drug used in one day or one week                                  |
+| Schedule   | Which days is the drug administrated in one cycle or one week                           |
+| comments   | Addtional info by the data curators                                                     |
+### mtd.csv
+
+| NCTID     | Registration ID, typically is a NCT ID (clinicaltrials.gov)                             |
+| --------- | --------------------------------------------------------------------------------------- |
+| CombnID   | A random number to differentiate multiple drug combinations or drug dosing in one trial |
+| Drug_Name | Drug name (e.g., brand name, generic name, or internal name)                            |
+| MTD_Value | The number of dose                                                                      |
+| MTD_Uint  | Dose unit                                                                               |
+| Frequency | How many times is the drug used in one day or one week                                  |
+| Schedule  | Which days is the drug administrated in one cycle or one week                           |
+| comments  | Addtional info by the data curators                                                     |
+### observed_dlt.csv
+
+| PMID               | PubMed unique identifier. **Files can be linked by PMID**                               |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| NCTID              | Registration ID, typically is a NCT ID (clinicaltrials.gov)                             |
+| CombnID            | A random number to differentiate multiple drug combinations or drug dosing in one trial |
+| DLT                | The DLT occured on the participants                                                     |
+| Grade              | The severity of the DLT                                                                 |
+| Duration           | How long does DLT last?                                                                 |
+| At_level           | The dose the participants take for the DLT                                              |
+| Observed_Frequency | How many participants have the DLT                                                      |
+| Total              | The total number of participants at the sepcific dose                                   |
+| Occurence          | Exact day the DLT occurs                                                                |
+| comments           | Addtional info by the data curators                                                     |
+| combined_dose_info | The detailed dose info mapped from dose_lvel.csv                                        |
+|                    |                                                                                         |
 
 
 ## License
